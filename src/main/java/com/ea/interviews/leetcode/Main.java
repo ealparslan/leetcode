@@ -1,5 +1,7 @@
 package com.ea.interviews.leetcode;
 
+import com.sun.org.apache.regexp.internal.RE;
+
 import java.util.stream.Collectors;
 
 
@@ -24,8 +26,17 @@ public class Main {
         AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
         ListNode result = addTwoNumbers.addTwoNumbers(l1,l2);*/
 
-        LongestSubstringWithoutRepeatingCharacters longestSubstringWithoutRepeatingCharacters = new LongestSubstringWithoutRepeatingCharacters();
-        System.out.print(longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring("pwwwwkewq"));
+//        LongestSubstringWithoutRepeatingCharacters longestSubstringWithoutRepeatingCharacters = new LongestSubstringWithoutRepeatingCharacters();
+//        System.out.print(longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring("pwwwwkewq"));
+
+//        LongestPalindromicSubstring longestPalindromicSubstring = new LongestPalindromicSubstring();
+//        System.out.println(longestPalindromicSubstring.longestPalindromeSubstring("cccccc"));
+
+//        ZigzagConversion zigzagConversion = new ZigzagConversion();
+//        System.out.println(zigzagConversion.convert2("a",2));
+
+        ReverseInteger reverseInteger = new ReverseInteger();
+        System.out.println(reverseInteger.reverse(-321));
     }
 
 }
