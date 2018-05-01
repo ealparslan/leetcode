@@ -37,6 +37,7 @@ public class Main {
 
         ReverseInteger reverseInteger = new ReverseInteger();
         System.out.println(reverseInteger.reverse(-321));
+
     }
 
 }
