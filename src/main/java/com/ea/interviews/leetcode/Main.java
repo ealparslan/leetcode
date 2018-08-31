@@ -1,6 +1,7 @@
 package com.ea.interviews.leetcode;
 
 import com.sun.org.apache.regexp.internal.RE;
+import com.sun.xml.internal.org.jvnet.mimepull.DecodingException;
 
 import java.util.stream.Collectors;
 
@@ -35,8 +36,13 @@ public class Main {
 //        ZigzagConversion zigzagConversion = new ZigzagConversion();
 //        System.out.println(zigzagConversion.convert2("a",2));
 
-        ReverseInteger reverseInteger = new ReverseInteger();
-        System.out.println(reverseInteger.reverse(-321));
+//        ReverseInteger reverseInteger = new ReverseInteger();
+//        System.out.println(reverseInteger.reverse(-321));
+//        DecodeString decodeString = new DecodeString();
+//        System.out.println(decodeString.decode("3[a2[bc]]"));
+
+        TreeNodeTraversal treeNodeTraversal = new TreeNodeTraversal();
+        treeNodeTraversal.traverse(treeNodeTraversal.init(),0 );
 
     }
 
