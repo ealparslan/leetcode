@@ -41,8 +41,43 @@ public class Main {
 //        DecodeString decodeString = new DecodeString();
 //        System.out.println(decodeString.decode("3[a2[bc]]"));
 
-        TreeNodeTraversal treeNodeTraversal = new TreeNodeTraversal();
-        treeNodeTraversal.traverse(treeNodeTraversal.init(),0 );
+//        TreeNodeTraversal treeNodeTraversal = new TreeNodeTraversal();
+//        treeNodeTraversal.traverse(treeNodeTraversal.init(),0 );
+
+//        Stack stack = new Stack(new Node(3));
+//        stack.push(2);
+//        stack.push(5);
+//        System.out.println(stack.pop().value);
+//        System.out.println(stack.pop().value);
+//        stack.push(4);
+//        System.out.println(stack.pop().value);
+//        System.out.println(stack.pop().value);
+//
+//        System.out.println("queue");
+//
+//        Queue queue = new Queue(new Node(3));
+//        queue.enqueue(5);
+//        queue.enqueue(7);
+//        System.out.println(queue.dequeue().value);
+//        queue.enqueue(9);
+//        System.out.println(queue.dequeue().value);
+//        System.out.println(queue.dequeue().value);
+//        System.out.println(queue.dequeue().value);
+
+
+        BinarySearchTree<Integer> tree = new BinarySearchTree<>(7);
+        tree.insert(5);
+        tree.insert(16);
+        tree.insert(22);
+        tree.insert(17);
+        tree.insert(22);
+        tree.insert(2);
+        tree.insert(3);
+
+        TreeNode node = tree.search(16);
+
+        System.out.println(tree);
+
 
     }
 
