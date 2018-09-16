@@ -65,18 +65,18 @@ public class Main {
 //        System.out.println(queue.dequeue().value);
 
 
-        BinarySearchTree<Integer> tree = new BinarySearchTree<>(7);
-        tree.insert(5);
-        tree.insert(16);
-        tree.insert(22);
-        tree.insert(17);
-        tree.insert(22);
-        tree.insert(2);
-        tree.insert(3);
+//        BinarySearchTree<Integer> tree = new BinarySearchTree<>(7);
+//        tree.insert(5);
+//        tree.insert(16);
+//        tree.insert(22);
+//        tree.insert(17);
+//        tree.insert(22);
+//        tree.insert(2);
+//        tree.insert(3);
+//
+//        TreeNode node = tree.search(16);
 
-        TreeNode node = tree.search(16);
-
-        System.out.println(tree);
+        System.out.println(Integer.MIN_VALUE);
 
 
     }
