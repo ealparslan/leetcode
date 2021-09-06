@@ -2,42 +2,57 @@ package com.ea.interviews.leetcode;
 
 // 2
 
- class ListNode {
-     int val;
-     ListNode next;
-     ListNode(int x) { val = x; }
- }
-
-
 public class AddTwoNumbers {
 
-     boolean hasAdditive;
-     boolean topElement = true;
+    private static class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) { val = x; }
+    }
 
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        int sum, sumSimple;
-        sum = l1.val + l2.val + ((hasAdditive) ? 1 : 0);
-        sumSimple = sum % 10;
-        hasAdditive = (sum > 9) ?  true :  false;
-        ListNode result = new ListNode(sumSimple);
+    public static void main(String[] args) {
+        ListNode l1 = new ListNode(2);
+        l1.next = new ListNode(4);
+        l1.next.next = new ListNode(3);
 
-        if(topElement){
-            topElement = false;
+        ListNode l2 = new ListNode(5);
+        l2.next = new ListNode(6);
+        l2.next.next = new ListNode(4);
+
+        ListNode l = addTwoNumbers(l1,l2 );
+
+        System.out.println(l);
+    }
+
+
+    private static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+
+        int rem = 0;
+
+        ListNode head = l1;
+
+        while (l1.next != null){
+            int sum = l1.val + (l2 == null ? 0 : l2.val);
+            l1.val = sum / 10;
+            rem = sum % 10;
+            l1 = l1.next;
+            l2 = l2.next;
         }
 
-        if (l1.next != null && l2.next != null){ // both are not null
-            //result.next = new ListNode(0);
-            result.next = addTwoNumbers(l1.next , l2.next);
-        }
-        else if (l1.next == null && l2.next != null){ // 1st is null
-            result.next = addTwoNumbers(new ListNode(0) , l2.next);
-        }
-        else if (l1.next != null && l2.next == null){ // 2nd is null
-            result.next = addTwoNumbers(l1.next , new ListNode(0));
-        }
-        else if (hasAdditive) result.next = new ListNode(1); // both are null but we have an additive
+        if (l1.next == null)
+            {
+                while(l2.next != null){
+                    if(l2.val == 9){
+                        l2.val = 0;
+                        rem = 1;
+                    }
+                }
 
-        return result;
+            }
+
+
+
+        return head;
     }
 
 
