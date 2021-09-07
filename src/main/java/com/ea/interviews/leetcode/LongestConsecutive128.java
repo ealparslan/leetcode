@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class LongestConsecutive {
+public class LongestConsecutive128 {
 
     Map<Integer, Bucket> startNeeds = new HashMap<>();
     Map<Integer, Bucket> endsNeeds = new HashMap<>();

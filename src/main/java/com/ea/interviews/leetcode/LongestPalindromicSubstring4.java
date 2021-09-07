@@ -2,7 +2,7 @@ package com.ea.interviews.leetcode;
 
 import java.util.ArrayList;
 
-public class LongestPalindromicSubstring {
+public class LongestPalindromicSubstring4 {
 
     public String longestPalindromeSubstring(String s){
 

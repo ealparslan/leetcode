@@ -1,6 +1,5 @@
 package com.ea.interviews.leetcode;
 
-import org.omg.CORBA.NO_IMPLEMENT;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,11 +27,9 @@ public class DFBFSearch {
         graph.nodes.get("g").adjecents.add(graph.nodes.get("h"));
         graph.nodes.get("b").adjecents.add(graph.nodes.get("h"));
 
-        System.out.println(graph);
+        System.out.println(DFsearch(graph.nodes.get("a"),"f" ));
 
-//        System.out.println(DFsearch(graph.nodes.get("a"),"c" ));
-
-        System.out.println(BFSearch(graph.nodes.get("a"),"f" ));
+//        System.out.println(BFSearch(graph.nodes.get("a"),"f" ));
     }
 
     private static GraphNode BFSearch(GraphNode node, String what){
@@ -53,18 +50,31 @@ public class DFBFSearch {
     }
 
     private static GraphNode DFsearch(GraphNode node, String what){
-        GraphNode found = null;
-        for (GraphNode adj:node.adjecents) {
-            if(!adj.visited){
-                adj.visited = true;
-                System.out.println(adj.name);
-                if(adj.name.equals(what))
-                    return adj;
-                found = DFsearch(adj, what);
-                if(found != null) break;
-            }
+        java.util.Stack<GraphNode> stack = new java.util.Stack<>();
+        stack.add(node);
+
+        while(!stack.isEmpty()){
+            GraphNode on=stack.pop();
+            if(on.visited)  continue;
+            else    on.visited=true;
+
+            if(on.name.equals(what))
+                return on;
+            else
+                stack.addAll(on.adjecents);
         }
-        return found;
+        return null;
+
+//        for (GraphNode adj:node.adjecents) {
+//            if(!adj.visited){
+//                adj.visited = true;
+//                System.out.println(adj.name);
+//                if(adj.name.equals(what))
+//                    return adj;
+//                found = DFsearch(adj, what);
+//                if(found != null) break;
+//            }
+//        }
     }
 }
 

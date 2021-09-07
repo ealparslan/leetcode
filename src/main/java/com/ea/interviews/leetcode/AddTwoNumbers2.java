@@ -2,7 +2,7 @@ package com.ea.interviews.leetcode;
 
 // 2
 
-public class AddTwoNumbers {
+public class AddTwoNumbers2 {
 
     private static class ListNode {
         int val;

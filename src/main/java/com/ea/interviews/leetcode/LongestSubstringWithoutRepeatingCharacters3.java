@@ -2,7 +2,7 @@ package com.ea.interviews.leetcode;
 
 // 3
 
-public class LongestSubstringWithoutRepeatingCharacters {
+public class LongestSubstringWithoutRepeatingCharacters3 {
 
     int maxLenght;
     String substr = new String();

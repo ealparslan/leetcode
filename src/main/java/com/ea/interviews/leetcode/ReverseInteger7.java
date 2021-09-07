@@ -1,7 +1,7 @@
 package com.ea.interviews.leetcode;
 
 
-public class ReverseInteger {
+public class ReverseInteger7 {
 
     public int reverse(int x) {
 

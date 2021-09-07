@@ -2,7 +2,7 @@ package com.ea.interviews.leetcode;
 
 import java.util.LinkedList;
 
-public class ValidParanthesis {
+public class ValidParanthesis20 {
 
     public static void main(String[] args){
 

@@ -2,7 +2,7 @@ package com.ea.interviews.leetcode;
 
 import java.util.Scanner;
 
-public class RomanToInteger {
+public class RomanToInteger13 {
 
     public static void main(String args[]){
 
